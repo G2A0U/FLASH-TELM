@@ -28,9 +28,9 @@ p {
     rgba(0, 0, 0, 1)
   );
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1600px) {
   body {
-    font-size: 12px;
+    font-size: 64px;
   }
 }
 
