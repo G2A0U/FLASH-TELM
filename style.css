@@ -5,6 +5,10 @@
   font-family: "Poppins", sans-serif;
   cursor: none;
 }
+body {
+    background-color: black; /* Fond noir pour tout le corps */
+    color: white; /* Texte blanc pour le contraste */
+}
 p {
   font-size: 1em;
   text-align: justify;
