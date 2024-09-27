@@ -33,17 +33,16 @@ p {
     font-size: 12px;
   }
 }
-video-container {
+.video-container {
   position: relative;
-  width: 20vw; /* Largeur de la vidéo */
-  height: auto;
-  opacity: 1
+  width: 15vw; /* Réduire la largeur de la vidéo */
+  max-width: 300px; /* Largeur maximum pour éviter d'être trop grande */
+  height: auto; 
+  margin: auto; /* Centre la vidéo horizontalement */
+  opacity: 1;
 }
 
 .video {
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  position: relative;
-  opacity: 1
+  width: 100%; /* La vidéo occupe toute la largeur de son conteneur */
+  height: auto; /* Hauteur automatique pour garder le ratio */
 }
