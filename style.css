@@ -5,6 +5,7 @@
   font-family: "Poppins", sans-serif;
   cursor: none;
 }
+
 p {
   font-size: 1em;
   text-align: justify;
@@ -12,10 +13,12 @@ p {
   padding: 0 2em;
   margin-bottom: 1em;
 }
+
 #flashlight {
   --Xpos: 50vw;
   --Ypos: 50vh;
 }
+
 #flashlight:before {
   content: "";
   display: block;
@@ -28,22 +31,25 @@ p {
     rgba(0, 0, 0, 1)
   );
 }
+
 @media screen and (min-width: 800px) {
   body {
     font-size: 24px;
   }
 }
-video-container {
-  position: relative;
-  width: 40vw; /* Largeur de la vidéo */
-  height: auto;
-  opacity: 1
-}
 
-.video {
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  position: relative;
-  opacity: 1
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 16px; /* Taille de police pour les mobiles */
+  }
+
+  #flashlight {
+    width: 100vw; /* Pleine largeur pour la lampe de poche */
+    height: 100vh; /* Pleine hauteur pour la lampe de poche */
+  }
+
+  video {
+    width: 100%; /* La vidéo occupe toute la largeur de l'écran */
+    height: auto; /* Hauteur automatique pour garder le ratio */
+  }
 }
