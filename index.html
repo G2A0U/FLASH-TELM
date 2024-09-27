@@ -11,14 +11,16 @@
     <!-- Stylesheet-->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+<body style="background-color: black;">
     <div id="flashlight"></div>
-    <!-- Balise vidéo pour la vidéo locale -->
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-<video id="video" width="30%" height="auto" autoplay loop>
-  <source src="19 September 2024.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+    <div class="video-container">
+        <video id="video" width="30%" height="auto" autoplay loop>
+            <source src="19 September 2024.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script src="index.mjs"></script>
+</body>
     <!-- Script -->
     <script src="index.mjs"></script>
   </body>
