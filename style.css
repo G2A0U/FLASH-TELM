@@ -5,17 +5,12 @@
   font-family: "Poppins", sans-serif;
   cursor: none;
 }
-p {
-  font-size: 1em;
-  text-align: justify;
-  line-height: 2em;
-  padding: 0 2em;
-  margin-bottom: 1em;
-}
+
 #flashlight {
   --Xpos: 50vw;
   --Ypos: 50vh;
 }
+
 #flashlight:before {
   content: "";
   display: block;
@@ -28,22 +23,31 @@ p {
     rgba(0, 0, 0, 1)
   );
 }
+
+.video-container {
+  position: absolute; /* Position absolue pour centrer */
+  top: 50%; /* Centrer verticalement */
+  left: 50%; /* Centrer horizontalement */
+  transform: translate(-50%, -50%); /* Ajustement du centrage */
+  width: 80vw; /* Largeur de la vidéo */
+  max-width: 600px; /* Largeur maximum */
+  height: auto; /* Hauteur automatique */
+  z-index: 0; /* En arrière-plan */
+}
+
+video {
+  width: 100%; /* La vidéo occupe toute la largeur de son conteneur */
+  height: auto; /* Hauteur automatique pour garder le ratio */
+}
+
 @media screen and (min-width: 800px) {
   body {
     font-size: 24px;
   }
 }
-video-container {
-  position: relative;
-  width: 40vw; /* Largeur de la vidéo */
-  height: auto;
-  opacity: 1
-}
 
-.video {
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  position: relative;
-  opacity: 1
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 16px; /* Taille de police pour les mobiles */
+  }
 }
