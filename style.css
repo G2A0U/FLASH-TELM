@@ -6,14 +6,6 @@
   cursor: none;
 }
 
-p {
-  font-size: 1em;
-  text-align: justify;
-  line-height: 2em;
-  padding: 0 2em;
-  margin-bottom: 1em;
-}
-
 #flashlight {
   --Xpos: 50vw;
   --Ypos: 50vh;
@@ -32,6 +24,32 @@ p {
   );
 }
 
+.video-container {
+  position: relative;
+  width: 100%; /* Pleine largeur */
+  height: 100vh; /* Hauteur de l'écran */
+  overflow: hidden; /* Cacher le débordement */
+}
+
+video {
+  width: 100%; /* La vidéo occupe toute la largeur de l'écran */
+  height: auto; /* Hauteur automatique pour garder le ratio */
+  position: absolute; /* Positionnement absolu */
+  top: 0; /* Aligné en haut */
+  left: 0; /* Aligné à gauche */
+  z-index: 0; /* En arrière-plan */
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur noire semi-transparente */
+  z-index: 1; /* Au-dessus de la vidéo */
+}
+
 @media screen and (min-width: 800px) {
   body {
     font-size: 24px;
@@ -41,15 +59,5 @@ p {
 @media screen and (max-width: 800px) {
   body {
     font-size: 16px; /* Taille de police pour les mobiles */
-  }
-
-  #flashlight {
-    width: 100vw; /* Pleine largeur pour la lampe de poche */
-    height: 100vh; /* Pleine hauteur pour la lampe de poche */
-  }
-
-  video {
-    width: 100%; /* La vidéo occupe toute la largeur de l'écran */
-    height: auto; /* Hauteur automatique pour garder le ratio */
   }
 }
